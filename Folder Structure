@@ -1,0 +1,43 @@
+mental-health-ai/
+│
+├── app/
+│   ├── api/
+│   │   ├── analyze/
+│   │   │   └── route.ts
+│   │   ├── register/
+│   │   │   └── route.ts
+│   │   └── login/
+│   │       └── route.ts
+│   │
+│   ├── dashboard/
+│   │   └── page.tsx
+│   │
+│   ├── login/
+│   │   └── page.tsx
+│   │
+│   ├── register/
+│   │   └── page.tsx
+│   │
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── AnalysisCard.tsx
+│   └── RecommendationCard.tsx
+│
+├── lib/
+│   ├── mongodb.ts
+│   ├── ai.ts
+│   └── recommendations.ts
+│
+├── models/
+│   ├── User.ts
+│   └── Assessment.ts
+│
+├── .env.local
+├── tailwind.config.ts
+├── package.json
+└── tsconfig.json
