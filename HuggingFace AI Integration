@@ -1,0 +1,25 @@
+import axios from "axios";
+
+const API_URL =
+  "https://api-inference.huggingface.co/models/j-hartmann/emotion-english-distilroberta-base";
+
+export async function analyzeMentalHealth(text: string) {
+  try {
+    const response = await axios.post(
+      API_URL,
+      {
+        inputs: text,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
