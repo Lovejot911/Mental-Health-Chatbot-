@@ -1,0 +1,47 @@
+export function getRecommendations(label: string) {
+  switch (label.toLowerCase()) {
+    case "sadness":
+      return {
+        condition: "Possible Depression Symptoms",
+        suggestions: [
+          "Talk to trusted family members",
+          "Maintain healthy sleep",
+          "Try mindfulness meditation",
+          "Consult a therapist if symptoms continue",
+        ],
+      };
+
+    case "fear":
+      return {
+        condition: "Possible Anxiety Symptoms",
+        suggestions: [
+          "Practice breathing exercises",
+          "Reduce caffeine",
+          "Try yoga or meditation",
+          "Consider professional guidance",
+        ],
+      };
+
+    case "anger":
+      return {
+        condition: "Stress or Burnout",
+        suggestions: [
+          "Take regular breaks",
+          "Exercise daily",
+          "Reduce workload stress",
+          "Maintain work-life balance",
+        ],
+      };
+
+    default:
+      return {
+        condition: "General Wellness",
+        suggestions: [
+          "Drink enough water",
+          "Sleep properly",
+          "Exercise regularly",
+          "Stay socially connected",
+        ],
+      };
+  }
+}
